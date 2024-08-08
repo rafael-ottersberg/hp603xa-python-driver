@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hp603xa"
+dynamic = ["version"]
+description = "A Python driver for controlling the HP/Agilent/Keysight 6033A power supply via GPIB."
+authors = [
+    { name = "Rafael Ottersberg", email = "rafael.ottersberg@gmx.ch" }
+]
+readme = "README.md"
+requires-python = ">=3.6"
+keywords = ["HP6033A", "6033A", "power supply", "HP", "Agilent", "Keysight", "GPIB", "VISA", "pyvisa"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "pyvisa==1.11.3"
+]
+
+[project.urls]
+Homepage = "https://github.com/rafael-ottersberg/hp603xa-python-driver"
