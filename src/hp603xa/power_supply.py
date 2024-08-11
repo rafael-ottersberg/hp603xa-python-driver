@@ -76,6 +76,14 @@ class Instrument:
             print(e)
             print(self.read_errors())
 
+    def get_current(self):
+        """Get the output current setting of the power supply with unit [A]."""
+        return self.parse_number(self.gpib_instrument.query("SOUR:CURR?"))
+    
+    def get_voltage(self):
+        """Get the output voltage setting of the power supply with unit [V]."""
+        return self.parse_number(self.gpib_instrument.query("SOUR:VOLT?"))
+
     def measure_voltage(self):
         """Measure the output voltage of the power supply with unit [V]."""
         return self.parse_number(self.gpib_instrument.query("MEAS:VOLT?"))
